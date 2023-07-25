@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+    .button {
+        @apply text-dark-grey-button font-medium text-sm hover:text-dark-grey-button-hover;
+    }
+
+    .blue_button {
+        @apply hover:bg-sky-500 ease-in-out duration-300 border-solid border border-sky-500 rounded-md bg-sky-600 py-1 px-4 text-white font-medium text-sm ;
+    }
+    .glassmorphism {
+        @apply   backdrop-blur p-5 ;
+        background-color: rgba(16,16,35, 0.8);
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+body::-webkit-scrollbar {
+    width: 0.5em;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*body::-webkit-scrollbar-track {*/
+/*    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1e1e42;
+    border-radius: 10px;
+    /*outline: 1px solid slategrey;*/
 }
+
