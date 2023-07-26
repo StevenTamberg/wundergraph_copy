@@ -11,7 +11,7 @@
         @apply hover:bg-sky-500 ease-in-out duration-300 border-solid border border-sky-500 rounded-md bg-sky-600 py-1 px-4 text-white font-medium text-sm ;
     }
     .glassmorphism {
-        @apply   backdrop-blur p-5 ;
+        @apply   backdrop-blur p-4 ;
         background-color: rgba(16,16,35, 0.8);
     }
 }
@@ -30,5 +30,25 @@ body::-webkit-scrollbar-thumb {
     background-color: #1e1e42;
     border-radius: 10px;
     /*outline: 1px solid slategrey;*/
+}
+
+
+@for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+100% {
+    transform: translate3d((random(90) * 2px), (random(90) * 3px), (random(100) * 1px));
+}
+}
+
+.particle:nth-child(#{$i}){
+    position: absolute;
+    animation: particle-animation-#{$i} 60s infinite;
+    $size: random(5) + 5 + px;
+    height: $size;
+    width: $size;
+    animation-delay: -$i * .05s;
+    transform: translate3d((random(90) * 2px), (random(90) * 3px), (random(100) * 1px));
+
+}
 }
 

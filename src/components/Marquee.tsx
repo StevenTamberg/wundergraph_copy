@@ -13,9 +13,9 @@ import Image from "next/image";
 
 const Marquee = () => {
     return (
-        <div className="relative flex overflow-x-hidden w-auto ">
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-dark-blue-bg via-dark-blue-bg to-transparent w-36"></div>
-            <div className="absolute z-10 right-0 top-0 h-full w-36 bg-gradient-to-r from-transparent via-dark-blue-bg to-dark-blue-bg"></div>
+        <div className="relative flex overflow-x-hidden w-auto z-10 ">
+            <div className="absolute inset-0 z-20 bg-gradient-to-r from-dark-blue-bg via-dark-blue-bg to-transparent w-1/6"></div>
+            <div className="absolute z-20 right-0 top-0 h-full w-1/6 bg-gradient-to-r from-transparent via-dark-blue-bg to-dark-blue-bg"></div>
             <div className=" animate-marquee whitespace-nowrap flex gap-10  items-center">
 
                 <span className="mx-4 text-4xl">

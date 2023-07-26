@@ -43,7 +43,7 @@ const BlobBackground: React.FC = () => {
     const blobPositions = [
         { x: 34, y: 80, size: 10 },
         { x: 85, y: 75, size: 10 },
-        { x: 15, y: 50, size: 4 },
+        { x: 30, y: 50, size: 4 },
         { x: 25, y: 20, size: 4 },
         { x: 80, y: 80, size: 4 },
         { x: 80, y: 30, size: 8 },

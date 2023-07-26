@@ -3,6 +3,8 @@ import React, {useEffect, useState} from "react";
 
 const Blob = ({ mousePosition, movementScale, size, pos }: any) => {
 
+
+
     // Check if running in the browser before accessing the window object
     const [w, setW] = useState({
         width: 0,
@@ -20,12 +22,16 @@ const Blob = ({ mousePosition, movementScale, size, pos }: any) => {
 
     }, [size]);
 
+    useEffect(() => {
+
+    })
+
     return (
         <div
-            className={`bg-blob rounded-full absolute transition-transform ease-in-out duration-300`}
+            className={`bg-blob rounded-full absolute transition-transform ease-in-out duration-300 particle`}
             style={{ width: sz, height: sz,
                 left: `calc( -${pos.x}% + 100% - ${((mousePosition.x / w.width) * (size - 2) * 10 * movementScale).toFixed(2)}%)`,
-                top: `calc(-${pos.y}% + 100% - ${((mousePosition.y / w.height) * (size - 2) * 5 * movementScale).toFixed(2)}%)`,
+                top: `calc(-${pos.y}% + 87% - ${((mousePosition.y / w.height) * (size - 2) * 2 * movementScale).toFixed(2)}%)`,
             }}
         ></div>
     );

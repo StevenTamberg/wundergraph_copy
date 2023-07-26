@@ -20,13 +20,17 @@ module.exports = {
         'border': '#201F38',
       },
       width: {
+        '380': '380px',
         '800': '800px',
         '850': '850px',
+        '1400': '1400px',
         '1700': '1500px',
+        '1600': '1600px',
       },
       animation: {
         marquee: 'marquee 28s linear infinite',
         marquee2: 'marquee2 28s linear infinite',
+        pulse: 'pulse 1s infinite ease-out',
       },
       keyframes: {
         marquee: {
@@ -36,6 +40,17 @@ module.exports = {
         marquee2: {
           '0%': { transform: 'translateX(102%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        pulse: {
+
+          '50%': {
+            opacity: '1',
+            transform: 'scale(1)',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'scale(2)',
+          }
         },
       },
     },
